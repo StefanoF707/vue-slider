@@ -19,6 +19,7 @@
 
 .carousel_container {
     display: flex;
+    position: relative;
     width: 80%;
     height: 500px;
     margin: auto;
@@ -48,4 +49,25 @@
 .carousel {
     width: calc(100% - 100px);
     height: 100%;
+}
+
+.nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff50;
+}
+
+.nav > i {
+    margin: 0 5px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.nav > i:hover {
+    color: #fff;
+}
+
+.active {
+    color: #fff;
 }

@@ -19,6 +19,7 @@ let app = new Vue (
                 if(this.indexArray < 0) {
                     this.indexArray = this.images.length - 1;
                 }
+
             },
             nextImg: function () {
                 this.indexArray++;
@@ -26,6 +27,10 @@ let app = new Vue (
                 if(this.indexArray == this.images.length) {
                     this.indexArray = 0;
                 }
+
+            },
+            switchClass: function(index) {
+                this.indexArray = index;
             }
         }
     }

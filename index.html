@@ -14,17 +14,21 @@
             <div id="wrapper">
 
                 <div class="carousel_container">
+
                     <div class="switch_left">
                         <i class="fas fa-chevron-left" @click="prevImg"></i>
                     </div>
-
                     <div class="carousel">
                         <img :src="images[indexArray]" alt="image" class="fit_img">
                     </div>
-
                     <div class="switch_right">
                         <i class="fas fa-chevron-right" @click="nextImg"></i>
                     </div>
+
+                    <div class="nav">
+                        <i v-for="(image, index) in images" :class=" index == indexArray ? 'active' : ' ' " class="fas fa-circle" @click="switchClass(index)"></i>
+                    </div>
+
                 </div>
             </div>
 
