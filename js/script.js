@@ -1,6 +1,11 @@
 let app = new Vue (
     {
         el: "#root",
+        created: function() {
+            this.autoPlay = setInterval( () => {
+                this.nextImg();
+            }, 1500 );
+        },
         data: {
             indexArray: 0,
             images: [
@@ -11,6 +16,7 @@ let app = new Vue (
                 "img/norway.jpg",
                 "img/times-square.jpg",
             ],
+            autoPlay: "",
         },
         methods: {
             prevImg: function () {
@@ -21,6 +27,10 @@ let app = new Vue (
                 }
 
             },
+            clickPrev: function() {
+                clearInterval(this.autoPlay);
+                this.prevImg();
+            },
             nextImg: function () {
                 this.indexArray++;
 
@@ -29,9 +39,17 @@ let app = new Vue (
                 }
 
             },
+            clickNext: function() {
+                clearInterval(this.autoPlay);
+                this.nextImg();
+            },
             switchClass: function(index) {
                 this.indexArray = index;
-            }
+            },
+            clickIcon: function(index) {
+                clearInterval(this.autoPlay);
+                this.switchClass(index);
+            },
         }
     }
 );
