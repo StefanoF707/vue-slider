@@ -62,7 +62,7 @@
 .nav > i {
     margin: 0 5px;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 1s;
 }
 .nav > i:hover {
     color: #fff;

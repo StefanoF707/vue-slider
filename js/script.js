@@ -53,7 +53,7 @@ let app = new Vue (
             restartAutoplay: function() {
                 this.autoPlay = setInterval( () => {
                     this.nextImg();
-                }, 1500 );
+                }, 2000 );
             }
         }
     }
