@@ -50,6 +50,11 @@ let app = new Vue (
                 clearInterval(this.autoPlay);
                 this.switchClass(index);
             },
+            restartAutoplay: function() {
+                this.autoPlay = setInterval( () => {
+                    this.nextImg();
+                }, 1500 );
+            }
         }
     }
 );
